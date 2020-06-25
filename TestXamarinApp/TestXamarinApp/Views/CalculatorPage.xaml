@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             mc:Ignorable="d"
+             x:Class="TestXamarinApp.Views.CalculatorPage">
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="Black" RowSpacing="1" ColumnSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="2*"/>
+                <RowDefinition  Height="*"/>
+                <RowDefinition  Height="*"/>
+                <RowDefinition  Height="*"/>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label FontSize="50" FontAttributes="Bold" BackgroundColor="Black" Text="{Binding Result, Mode=TwoWay}" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"
+                   LineBreakMode="NoWrap" Grid.ColumnSpan="4"></Label>
+
+            <Button Text="1" Grid.Row="1" Grid.Column="0"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0" Command="{Binding SelectNumber}" CommandParameter="1"/>
+
+            <Button Text="2" Grid.Row="1" Grid.Column="1"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="2"/>
+
+            <Button Text="3" Grid.Row="1" Grid.Column="2"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="3"/>
+
+            <Button Text="+" Grid.Row="1" Grid.Column="3"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="36" BorderRadius="0" Command="{Binding SelectOperator}" CommandParameter="+"/>
+
+            <Button Text="4" Grid.Row="2" Grid.Column="0"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="4"/>
+
+            <Button Text="5" Grid.Row="2" Grid.Column="1"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="5"/>
+
+            <Button Text="6" Grid.Row="2" Grid.Column="2"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="6"/>
+
+            <Button Text="-" Grid.Row="2" Grid.Column="3"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="42" BorderRadius="0" Command="{Binding SelectOperator}" CommandParameter="-"/>
+
+
+            <Button Text="7" Grid.Row="3" Grid.Column="0"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="7"/>
+
+            <Button Text="8" Grid.Row="3" Grid.Column="1"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="8"/>
+
+            <Button Text="9" Grid.Row="3" Grid.Column="2"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="9"/>
+
+            <Button Text="x" Grid.Row="3" Grid.Column="3"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="23" BorderRadius="0" Command="{Binding SelectOperator}" CommandParameter="x"/>
+
+            <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
+                    BackgroundColor="White" TextColor="Red"
+                    FontSize="36" BorderRadius="0"  Command="{Binding SelectNumber}" CommandParameter="0"/>
+
+            <Button Text="÷" Grid.Row="4" Grid.Column="3"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="36" BorderRadius="0" Command="{Binding SelectOperator}" CommandParameter="÷"/>
+
+            <Button Text="C" Grid.Row="5" Grid.Column="0"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="36" BorderRadius="0" Command="{Binding Clear}"/>
+
+            <Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"
+                    BackgroundColor="#78780E" TextColor="White"
+                    FontSize="36" BorderRadius="0" Command="{Binding Calculate}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
