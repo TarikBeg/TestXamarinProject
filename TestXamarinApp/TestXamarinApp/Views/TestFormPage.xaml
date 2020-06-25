@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="TestXamarinApp.Views.TestFormPage">
     <ContentPage.Content>
-        <TableView Intent="Form">
+        <!--<TableView Intent="Form">
             <TableRoot>
                 <TableSection Title="Personal data">
                     <EntryCell Label="First Name" Placeholder="First Name"></EntryCell>
@@ -19,6 +19,9 @@
                     </ViewCell>
                 </TableSection>
             </TableRoot>
-        </TableView>
+        </TableView>-->
+        <StackLayout>
+            <Entry Placeholder="Sads"></Entry>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
