@@ -15,6 +15,7 @@
                         <StackLayout Orientation="Horizontal" Padding="13,0">
                             <Label Text="Password" VerticalOptions="Center"></Label>
                             <Entry IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand"></Entry>
+                            <Button Text="Allert" Clicked="Button_OnClicked"></Button>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>

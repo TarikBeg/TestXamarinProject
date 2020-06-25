@@ -16,5 +16,10 @@ namespace TestXamarinApp.Views
         {
             InitializeComponent();
         }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Allert", "This is new allert", "yes", "no");
+        }
     }
 }
