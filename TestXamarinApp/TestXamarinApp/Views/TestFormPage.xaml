@@ -12,7 +12,7 @@
                     <EntryCell Label="First Name" Placeholder="First Name"></EntryCell>
                     <EntryCell Label="Last Name" Placeholder="Last Name"></EntryCell>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="50,50">
+                        <StackLayout Orientation="Horizontal" Padding="15, 15">
                             <Label Text="Password" VerticalOptions="Center"></Label>
                             <Entry IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand"></Entry>
                         </StackLayout>
