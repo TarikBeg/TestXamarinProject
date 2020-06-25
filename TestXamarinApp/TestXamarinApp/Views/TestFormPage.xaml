@@ -14,7 +14,7 @@
                     <ViewCell>
                         <StackLayout Orientation="Horizontal" Padding="13,0">
                             <Label Text="Password" VerticalOptions="Center"></Label>
-                            <Entry IsPassword="True" Placeholder="Password" HorizontalOptions="EndAndExpand"></Entry>
+                            <Entry IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand"></Entry>
                         </StackLayout>
                     </ViewCell>
                 </TableSection>
