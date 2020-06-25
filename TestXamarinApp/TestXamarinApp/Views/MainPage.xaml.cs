@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using TestXamarinApp.Models;
+using Xamarin.Forms;
 
 namespace TestXamarinApp.Views
 {
@@ -35,6 +32,9 @@ namespace TestXamarinApp.Views
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        break;
+                    case (int)MenuItemType.TestForm:
+                        MenuPages.Add(id, new NavigationPage(new TestFormPage()));
                         break;
                 }
             }

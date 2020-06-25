@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TestXamarinApp.Models
+﻿namespace TestXamarinApp.Models
 {
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        TestForm
     }
+
     public class HomeMenuItem
     {
         public MenuItemType Id { get; set; }
