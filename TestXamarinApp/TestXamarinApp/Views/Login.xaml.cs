@@ -24,7 +24,7 @@ namespace TestXamarinApp.Views
             string _userName = "TarikBeg";
             string _password = "123";
 
-            if (_userName == userNameEntry.Text && _password == passwordEntry.Text)
+            if (_userName == name.Text && _password == password.Text)
             {
                 IsBusy = false;
                 await viewModel.NavigationService.PushAsync(PageUrls.MenuView);
