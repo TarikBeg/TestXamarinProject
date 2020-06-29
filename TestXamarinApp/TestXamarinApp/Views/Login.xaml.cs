@@ -1,6 +1,6 @@
-﻿
-using System;
-using System.Threading.Tasks;
+﻿using System;
+using TestXamarinApp.Constants;
+using TestXamarinApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,11 +12,11 @@ namespace TestXamarinApp.Views
         public string Password { get; set; }
         public string UserName { get; set; }
 
+        LoginViewModel viewModel = new LoginViewModel();
         public Login()
         {
             InitializeComponent();
-            BindingContext = this;
-
+            BindingContext = viewModel;
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)
@@ -24,10 +24,10 @@ namespace TestXamarinApp.Views
             string _userName = "TarikBeg";
             string _password = "123";
 
-            if (_userName == UserName && _password == Password)
+            if (_userName == userNameEntry.Text && _password == passwordEntry.Text)
             {
                 IsBusy = false;
-                await Navigation.PushModalAsync(new NavigationPage(new CalculatorPage()));
+                await viewModel.NavigationService.PushAsync(PageUrls.MenuView);
             }
             else
             {

@@ -18,7 +18,9 @@
                 <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
+            <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+                <Label Text="Welcome to Test xamarin app" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Black"></Label>
+            </StackLayout>
             <AbsoluteLayout HorizontalOptions="FillAndExpand" HeightRequest="300" WidthRequest="200" Grid.Row="1" Grid.Column="1">
 
                 <Frame AbsoluteLayout.LayoutFlags="SizeProportional" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1" 
@@ -27,24 +29,14 @@
                        >
                     <StackLayout Margin="0, 30">
                         <Label Text="Sign in" ></Label>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="Not a member? " Style="{StaticResource RegularStyle}"></Label>
-                            <Label Text="Register today!" Style="{StaticResource LinkStyle}">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer            
-                                        Command="{Binding RegisterCommand}"  
-                                        NumberOfTapsRequired="1" />
-                                </Label.GestureRecognizers>
-                            </Label>
-                        </StackLayout>
-                        <controls:RoundedEntry Placeholder="User name" WidthRequest="100" Style="{StaticResource RoundedEntryStyle}" Text="{Binding UserName, Mode=TwoWay}"/>
-                        <controls:RoundedEntry IsPassword="True" Placeholder="Password" WidthRequest="100" Style="{StaticResource RoundedEntryStyle}"  Text="{Binding Password, Mode=TwoWay}"/>
+                        <controls:RoundedEntry Placeholder="User name" WidthRequest="100" Style="{StaticResource RoundedEntryStyle}" Text="{Binding UserName, Mode=TwoWay} " x:Name="userNameEntry"/>
+                        <controls:RoundedEntry IsPassword="True" Placeholder="Password" x:Name="passwordEntry"  WidthRequest="100" Style="{StaticResource RoundedEntryStyle}"  Text="{Binding Password, Mode=TwoWay}"/>
                         <Button Text="Sign in" Clicked="Button_OnClicked"></Button>
                     </StackLayout>
                 </Frame>
                 <Frame  AbsoluteLayout.LayoutFlags="PositionProportional" Padding="0,0,0,0" BackgroundColor="Transparent" BorderColor="Transparent"
                     AbsoluteLayout.LayoutBounds="0.5,0,50,50" VerticalOptions="Fill" HorizontalOptions="Fill">
-                    <Image Source="bethanylogowithborder.png" VerticalOptions="Start" Grid.Row="0" Grid.RowSpan="2"></Image>
+                    <Image Source="infinityLogo.png" VerticalOptions="Start" Grid.Row="0" Grid.RowSpan="2"></Image>
                 </Frame>
             </AbsoluteLayout>
         </Grid>

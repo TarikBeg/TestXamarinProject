@@ -22,7 +22,7 @@ namespace TestXamarinApp.ViewModels
             set
             {
                 _result = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Result change");
             }
         }
 
@@ -30,13 +30,6 @@ namespace TestXamarinApp.ViewModels
         public ICommand Clear => new Command(OnClear);
         public ICommand SelectOperator => new Command<string>(OnSelectOperator);
         public ICommand Calculate => new Command(OnCalculate);
-
-        public override Task InitializeAsync(object data)
-        {
-            OnClear();
-
-            return base.InitializeAsync(data);
-        }
 
         public void OnSelectNumber(string numberPressed)
         {
