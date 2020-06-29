@@ -25,7 +25,7 @@ namespace TestXamarinApp
 
             MainPage = new NavigationPage(menuView);
             //MainPage = new MainPage();
-            NavigationService.PushAsync(PageUrls.Login);
+            NavigationService.PushAsync(PageUrls.LoginPage);
         }
 
         protected override void OnStart()

@@ -7,16 +7,13 @@ using Xamarin.Forms.Xaml;
 namespace TestXamarinApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Login : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        public string Password { get; set; }
-        public string UserName { get; set; }
-
         LoginViewModel viewModel = new LoginViewModel();
-        public Login()
+
+        public LoginPage()
         {
             InitializeComponent();
-            BindingContext = viewModel;
         }
 
         private async void Button_OnClicked(object sender, EventArgs e)
@@ -32,8 +29,8 @@ namespace TestXamarinApp.Views
             else
             {
                 await DisplayAlert("This username/password combination isn't known",
-                   "Error logging you in",
-                   "OK");
+                    "Error logging you in",
+                    "OK");
             }
         }
     }

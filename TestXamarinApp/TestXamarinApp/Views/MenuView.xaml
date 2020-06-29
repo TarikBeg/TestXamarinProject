@@ -2,19 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TestXamarinApp.Views.MenuView">
-  <Grid VerticalOptions="StartAndExpand">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="100"></RowDefinition>
-      <RowDefinition Height="*"></RowDefinition>
-    </Grid.RowDefinitions>
-    <Label Text="Welcome to Joe's Burger Store" FontSize="25"></Label>
-    <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1">
-            <Button Text="Order burgers" Command="{Binding OrderBurgerCommand}"></Button>
-      <!--<Button Text="Order burgers" Command="{Binding OrderBurgersCommand}"></Button>-->
-      <Button Text="View Cart" Command="{Binding }"></Button>
-      <Button Text="Take picture" Command="{Binding TakePictureCommand}"></Button>
-      <Button Text="View map" Command="{Binding ViewMapCommand}"></Button>
-      <Button Text="About Joe's Burgers" Command="{Binding AboutCommand}"></Button>
-    </StackLayout>
-  </Grid>
+    <Grid VerticalOptions="StartAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Text="Welcome to Joe's Burger Store" FontSize="25"></Label>
+        <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1">
+            <Button Text="Order burgers" Clicked="Button_OnClicked"></Button>
+            <Button Text="View Cart" Clicked="Button_OnClicked2"></Button>
+            <!--<Button Text="Take picture" Command="{Binding TakePictureCommand}"></Button>-->
+            <Button Text="View map" Clicked="Button_OnClicked3"></Button>
+            <Button Text="About Joe's Burgers" Command="{Binding AboutCommand}"></Button>
+        </StackLayout>
+    </Grid>
 </ContentPage>
