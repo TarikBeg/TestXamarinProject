@@ -16,7 +16,7 @@ namespace TestXamarinApp.Services
             switch (pageName)
             {
                 case PageUrls.MenuView: return new MenuView();
-                case PageUrls.Login: return new Login();
+                case PageUrls.LoginPage: return new LoginPage();
                 case PageUrls.OrderBurgersView: return new OrderBurgersView(new OrderBurgersViewModel());
                 //case PageUrls.ShowMapView: return new ShowMapView();
                 //case PageUrls.TakePictureView: return new TakePictureView();
