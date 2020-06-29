@@ -7,14 +7,14 @@
              x:Class="TestXamarinApp.Views.CalculatorPage">
 
     <ContentPage.Content>
-        <Grid BackgroundColor="Black" RowSpacing="1" ColumnSpacing="1">
+        <Grid  RowSpacing="1" ColumnSpacing="1">
             <Grid.RowDefinitions>
                 <RowDefinition  Height="2*"/>
                 <RowDefinition  Height="*"/>
                 <RowDefinition  Height="*"/>
                 <RowDefinition  Height="*"/>
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition  Width="*"/>
@@ -23,7 +23,8 @@
                 <ColumnDefinition  Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label FontSize="50" FontAttributes="Bold" BackgroundColor="Black" Text="{Binding Result, Mode=TwoWay}" TextColor="White" HorizontalOptions="End" VerticalOptions="Center"
+            <Label FontSize="50" FontAttributes="Bold" Text="{Binding Result, Mode=TwoWay}"
+                   TextColor="Red" HorizontalOptions="End" VerticalOptions="Center"
                    LineBreakMode="NoWrap" Grid.ColumnSpan="4"></Label>
 
             <Button Text="1" Grid.Row="1" Grid.Column="0"

@@ -48,6 +48,7 @@ namespace TestXamarinApp.ViewModels
             }
             
             double number;
+
             if (double.TryParse(numberPressed, out number))
             {
                 Result += number.ToString("N0");
