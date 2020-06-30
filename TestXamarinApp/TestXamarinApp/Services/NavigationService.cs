@@ -18,6 +18,7 @@ namespace TestXamarinApp.Services
                 case PageUrls.MenuView: return new MenuView();
                 case PageUrls.LoginPage: return new LoginPage();
                 case PageUrls.OrderBurgersView: return new OrderBurgersView(new OrderBurgersViewModel());
+                case PageUrls.CalculatorView: return new CalculatorPage();
                 //case PageUrls.ShowMapView: return new ShowMapView();
                 //case PageUrls.TakePictureView: return new TakePictureView();
                 case PageUrls.BurgerDetailView: return new BurgerDetailView(objectToPass);

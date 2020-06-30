@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using TestXamarinApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,6 +14,7 @@ namespace TestXamarinApp.Views
         public AboutPage()
         {
             InitializeComponent();
+            this.BindingContext = new AboutViewModel();
         }
     }
 }

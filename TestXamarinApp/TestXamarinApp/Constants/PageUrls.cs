@@ -10,5 +10,6 @@
         public const string ShowMapView = "ShowMapView";
         public const string TakePictureView = "TakePictureView";
         public const string BurgerDetailView = "BurgerDetailView ";
+        public const string CalculatorView = "CalculatorView ";
     }
 }
