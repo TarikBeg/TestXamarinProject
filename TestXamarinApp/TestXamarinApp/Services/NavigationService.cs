@@ -74,6 +74,11 @@ namespace TestXamarinApp.Services
             return Navigation.PopToRootAsync();
         }
 
+        public Task PopToMainView()
+        {
+            return Navigation.PushAsync(new NavigationPage(new MenuView()));
+        }
+
         public Task PopToRootAsync(bool animated)
         {
             return Navigation.PopToRootAsync(animated);
@@ -98,15 +103,15 @@ namespace TestXamarinApp.Services
             return Navigation.PushAsync(GetPage(pageName), animated);
         }
 
-        public async Task PushModalAsync(string pageName, object objectToPass)
+        public Task PushModalAsync(string pageName, object objectToPass)
         {
             ContentPage page = GetPage(pageName, objectToPass);
             //page.ViewModel.PassedDataContext = objectToPass;
             //Navigation = CurrentApplication.MainPage.Navigation;
             try
             {
-                await PopAsync();
-                await Navigation.PushAsync(new NavigationPage(new BurgerDetailView(objectToPass)));
+                //await PopAsync();
+                return Navigation.PushAsync(new NavigationPage(new BurgerDetailView((objectToPass))));
             }
             catch (Exception e)
             {

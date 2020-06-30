@@ -10,6 +10,7 @@ namespace TestXamarinApp.Contracts
         Task<Page> PopAsync();
         Task<Page> PopAsync(bool animated);
         Task PopToRootAsync();
+        Task PopToMainView();
         Task PushAsync(string pageName);
         IReadOnlyList<Page> ModalStack { get; }
         IReadOnlyList<Page> NavigationStack { get; }
