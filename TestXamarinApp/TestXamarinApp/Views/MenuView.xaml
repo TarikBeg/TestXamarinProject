@@ -1,19 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestXamarinApp.Views.MenuView">
-    <Grid VerticalOptions="StartAndExpand">
+             x:Class="TestXamarinApp.Views.MenuView" BackgroundColor="#dbdbdb">
+    <Grid VerticalOptions="StartAndExpand" >
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Label Text="Welcome to Joe's Burger Store" FontSize="25"></Label>
-        <StackLayout VerticalOptions="CenterAndExpand" Grid.Row="1">
-            <Button Text="Order burgers" Clicked="Button_OnClicked"></Button>
-            <Button Text="View Cart" Clicked="Button_OnClicked2"></Button>
-            <!--<Button Text="Take picture" Command="{Binding TakePictureCommand}"></Button>-->
-            <Button Text="View map" Clicked="Button_OnClicked3"></Button>
-            <Button Text="About Joe's Burgers" Command="{Binding AboutCommand}"></Button>
-        </StackLayout>
+        <Label Text="Welcome to Test Xamarin app" VerticalOptions="Center" HorizontalOptions="Center" FontSize="25"></Label>
+        <Frame CornerRadius="10" HeightRequest="250" Margin="0,100,0,0" BackgroundColor="White" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="550" Grid.Row="1">
+            <StackLayout >
+                <Button Text="Order burgers" Margin="0,15,0,0" Clicked="Button_OnClicked"></Button>
+                <Button Text="View Cart" Margin="0,15,0,0" Clicked="Button_OnClicked2"></Button>
+                 
+                <!--<Button Text="Take picture" Margin="0,15,0,0" BackgroundColor="Gray" Command="{Binding TakePictureCommand}"></Button>-->
+                <!--<Button Text="View map" Clicked="Button_OnClicked3"></Button>-->
+                
+                <Button Text="Calculator page" Margin="0,15,0,0" Clicked="Button_OnClicked3"></Button>
+
+                <Button Text="About Joe's Burgers" Margin="0,15,0,0" Clicked="Button_Clicked4"></Button>
+            </StackLayout>
+        </Frame>
+       
     </Grid>
 </ContentPage>

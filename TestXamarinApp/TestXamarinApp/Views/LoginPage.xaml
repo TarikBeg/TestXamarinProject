@@ -18,10 +18,9 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <AbsoluteLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center">
-                <Label Text="Welcome to Test uno app" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20"></Label>
-                <Frame   Padding="0,0,0,0" BackgroundColor="Transparent"
+                <Frame Padding="0,0,0,0" BackgroundColor="Transparent"
                     VerticalOptions="Center" HorizontalOptions="Center" Margin="0,100, 0,0">
-                    <Image Source="https://www.infinitymesh.com/resources/infinitymesh-logo.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="150"></Image>
+                    <Image Source="https://www.infinitymesh.com/resources/infinitymesh-logo.png" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="250"></Image>
                 </Frame>
             </AbsoluteLayout>
             <StackLayout HorizontalOptions="Center" HeightRequest="500" WidthRequest="500" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
@@ -31,10 +30,10 @@
                    HeightRequest="500">
                     <StackLayout HorizontalOptions="Center" VerticalOptions="StartAndExpand" Margin="0,120,0,0">
                         <Entry Placeholder="User name" WidthRequest="300" x:Name="name" BackgroundColor="Gray"
-                             Text="{Binding UserName, Mode=TwoWay}" TextColor="Black"/>
+                             Text="{Binding UserName, Mode=TwoWay}" TextColor="Black" />
                         <Entry IsPassword="True" Placeholder="Password" WidthRequest="300" x:Name="password"
                              Margin="0,10,0,0"  TextColor="Black" BackgroundColor="Gray" Text="{Binding Password, Mode=OneWay}"/>
-                        <Button   Margin="0,10,0,0"  Text="Sign in" WidthRequest="300" BackgroundColor="Gray" Clicked="Button_OnClicked"></Button>
+                        <Button Padding="5"  Margin="0,10,0,0"  Text="Sign in" WidthRequest="300" BackgroundColor="Gray" Clicked="Button_OnClicked"></Button>
                     </StackLayout>
                 </Frame>
             </StackLayout>

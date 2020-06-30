@@ -18,6 +18,7 @@ namespace TestXamarinApp.Services
                 case PageUrls.MenuView: return new MenuView();
                 case PageUrls.LoginPage: return new LoginPage();
                 case PageUrls.OrderBurgersView: return new OrderBurgersView(new OrderBurgersViewModel());
+                case PageUrls.CalculatorView: return new CalculatorPage();
                 //case PageUrls.ShowMapView: return new ShowMapView();
                 //case PageUrls.TakePictureView: return new TakePictureView();
                 case PageUrls.BurgerDetailView: return new BurgerDetailView(objectToPass);
@@ -98,15 +99,15 @@ namespace TestXamarinApp.Services
             return Navigation.PushAsync(GetPage(pageName), animated);
         }
 
-        public async Task PushModalAsync(string pageName, object objectToPass)
+        public Task PushModalAsync(string pageName, object objectToPass)
         {
             ContentPage page = GetPage(pageName, objectToPass);
             //page.ViewModel.PassedDataContext = objectToPass;
             //Navigation = CurrentApplication.MainPage.Navigation;
             try
             {
-                await PopAsync();
-                await Navigation.PushAsync(new NavigationPage(new BurgerDetailView(objectToPass)));
+                //await PopAsync();
+                return Navigation.PushAsync(new NavigationPage(new BurgerDetailView((objectToPass))));
             }
             catch (Exception e)
             {

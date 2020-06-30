@@ -1,5 +1,6 @@
 ﻿using JoesBurgerStore.Views;
 using System;
+using TestXamarinApp.Constants;
 using TestXamarinApp.ViewModels;
 using Xamarin.Forms;
 
@@ -7,29 +8,35 @@ namespace TestXamarinApp.Views
 {
     public partial class MenuView : ContentPage
     {
+        MenuViewModel vm = new MenuViewModel();
         public MenuView()
         {
             InitializeComponent();
 
-            BindingContext = new MenuViewModel();
+            BindingContext = vm;
         }
 
         private void Button_OnClicked(object sender, EventArgs e)
         {
             IsBusy = false;
-            Navigation.PushModalAsync(new NavigationPage(new TestXamarinApp.Views.OrderBurgersView(new OrderBurgersViewModel())));
+            vm.NavigationService.PushAsync(PageUrls.OrderBurgersView);
         }
 
         private void Button_OnClicked2(object sender, EventArgs e)
         {
             IsBusy = false;
-            Navigation.PushModalAsync(new NavigationPage(new CartView()));
+            vm.NavigationService.PushAsync(PageUrls.CartView);
         }
 
         private void Button_OnClicked3(object sender, EventArgs e)
         {
             IsBusy = false;
-            Navigation.PushModalAsync(new CalculatorPage());
+            vm.NavigationService.PushModalAsync(PageUrls.CalculatorView);
+        }
+
+        void Button_Clicked4(System.Object sender, System.EventArgs e)
+        {
+            vm.NavigationService.PushModalAsync(PageUrls.CartView);
         }
     }
 }
