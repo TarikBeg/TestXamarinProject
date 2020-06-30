@@ -25,7 +25,7 @@
 
     <customRenderers:ColoredEntry WidthRequest="100" Text="{Binding Amount, Mode=TwoWay}"></customRenderers:ColoredEntry>
     <!--<Entry WidthRequest="100" Text="{Binding Amount, Mode=TwoWay}"></Entry>-->
-    <Button Text="Add to cart" Command="{Binding AddToCartCommand}"></Button>
-    <Button Text="Read description" Command="{Binding ReadDescriptionCommand}"></Button>
+    <Button Text="Add to cart" BackgroundColor="Gray" Command="{Binding AddToCartCommand}"></Button>
+    <!--<Button Text="Read description" Command="{Binding ReadDescriptionCommand}"></Button>-->
   </StackLayout>
 </ContentPage>
