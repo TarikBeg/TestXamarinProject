@@ -1,5 +1,4 @@
-﻿using JoesBurgerStore.Views;
-using System;
+﻿using System;
 using TestXamarinApp.Constants;
 using TestXamarinApp.ViewModels;
 using Xamarin.Forms;
