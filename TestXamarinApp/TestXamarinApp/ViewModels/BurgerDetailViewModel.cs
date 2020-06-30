@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using TestXamarinApp.Constants;
 using TestXamarinApp.Contracts.ViewModels;
 using TestXamarinApp.Models;
 using TestXamarinApp.ViewModels.Base;
@@ -45,7 +46,7 @@ namespace TestXamarinApp.ViewModels
             AddToCartCommand = new Command(() =>
             {
                 CartDataService.AddCartItem(SelectedBurger, Amount);
-                NavigationService.PopModalAsync();
+                NavigationService.PopToMainView();
             });
 
             //ReadDescriptionCommand = new Command(() =>
